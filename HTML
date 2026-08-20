@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>kyaaefleure — Feminine Fragrance</title>
+
+    <meta
+        name="description"
+        content="kyaaefleure — elegant feminine fragrances made for the modern Gen Z girl."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CURSOR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- SPARKLE CONTAINER -->
+    <div id="sparkles"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            kyaaefleure
+            <span>FRAGRANCE HOUSE</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="#home" data-id="navHome">Home</a>
+            <a href="#shop" data-id="navShop">Shop</a>
+            <a href="#about" data-id="navAbout">About</a>
+            <a href="#promo" data-id="navPromo">Promo</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-btn" id="searchBtn" aria-label="Search">
+                <span>⌕</span>
+            </button>
+
+            <button class="language-btn" id="languageBtn">
+                <span id="languageText">ID</span>
+                <span>⌄</span>
+            </button>
+
+            <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+                <span>♡</span>
+                <b id="cartCount">0</b>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- LANGUAGE DROPDOWN -->
+    <div class="language-dropdown" id="languageDropdown">
+        <button data-language="id">Indonesia</button>
+        <button data-language="en">English</button>
+    </div>
+
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="searchOverlay">
+
+        <button class="close-search" id="closeSearch">×</button>
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari parfum favoritmu..."
+            >
+
+        </div>
+
+        <div id="searchResults"></div>
+
+    </div>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    THE ART OF FRAGRANCE
+                </p>
+
+                <h1>
+                    Your scent,
+                    <em>your story.</em>
+                </h1>
+
+                <p class="hero-description" id="heroDescription">
+                    Parfum feminin dengan karakter lembut, elegant,
+                    dan unforgettable — dibuat untuk menemani setiap
+                    versi dirimu.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#shop" class="btn btn-dark" id="shopNow">
+                        Shop Collection
+                    </a>
+
+                    <a href="#about" class="text-link">
+                        Discover kyaaefleure →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-image-wrapper">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=85"
+                        alt="Elegant perfume bottle"
+                        class="hero-image"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('image-fallback');"
+                    >
+
+                    <div class="hero-fallback">
+                        <span>kyaaefleure</span>
+                        <small>FRAGRANCE</small>
+                    </div>
+
+                </div>
+
+                <div class="hero-note">
+                    <span>01</span>
+                    <p>Soft<br>Elegance</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MARQUEE -->
+        <div class="marquee">
+
+            <div class="marquee-track">
+
+                <span>FEMININE FRAGRANCE</span>
+                <i>✦</i>
+
+                <span>SOFT ELEGANCE</span>
+                <i>✦</i>
+
+                <span>EVERYDAY LUXURY</span>
+                <i>✦</i>
+
+                <span>MADE FOR HER</span>
+                <i>✦</i>
+
+                <span>FEMININE FRAGRANCE</span>
+                <i>✦</i>
+
+                <span>SOFT ELEGANCE</span>
+                <i>✦</i>
+
+                <span>EVERYDAY LUXURY</span>
+                <i>✦</i>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHOP -->
+        <section class="shop-section" id="shop">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">OUR COLLECTION</p>
+
+                    <h2>
+                        Find your
+                        <em>signature scent.</em>
+                    </h2>
+                </div>
+
+                <p>
+                    Discover fragrances designed for
+                    every mood, moment, and version of you.
+                </p>
+
+            </div>
+
+
+            <!-- FILTER -->
+            <div class="filter-row">
+
+                <button class="filter active" data-filter="all">
+                    All
+                </button>
+
+                <button class="filter" data-filter="floral">
+                    Floral
+                </button>
+
+                <button class="filter" data-filter="sweet">
+                    Sweet
+                </button>
+
+                <button class="filter" data-filter="fresh">
+                    Fresh
+                </button>
+
+                <button class="filter" data-filter="elegant">
+                    Elegant
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT SLIDER -->
+            <div class="product-slider">
+
+                <button class="slider-arrow prev" id="prevBtn">
+                    ←
+                </button>
+
+                <div class="product-track" id="productTrack">
+
+
+                    <!-- PRODUCT 1 -->
+                    <article
+                        class="product-card"
+                        data-category="floral"
+                        data-name="Fleur de Rose"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="product-tag">
+                                BESTSELLER
+                            </span>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&q=85"
+                                alt="Fleur de Rose perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Fleur de Rose"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Fleur de Rose</h3>
+                                <p>Rose · Peony · Musk</p>
+                            </div>
+
+                            <strong>Rp 189.000</strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 2 -->
+                    <article
+                        class="product-card"
+                        data-category="sweet"
+                        data-name="Vanille Douce"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=800&q=85"
+                                alt="Vanille Douce perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Vanille Douce"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Vanille Douce</h3>
+                                <p>Vanilla · Amber · Sugar</p>
+                            </div>
+
+                            <strong>Rp 199.000</strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 3 -->
+                    <article
+                        class="product-card"
+                        data-category="fresh"
+                        data-name="Lumière Blanche"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="product-tag">
+                                NEW
+                            </span>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=85"
+                                alt="Lumière Blanche perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Lumière Blanche"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Lumière Blanche</h3>
+                                <p>White Musk · Citrus · Linen</p>
+                            </div>
+
+                            <strong>Rp 179.000</strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 4 -->
+                    <article
+                        class="product-card"
+                        data-category="elegant"
+                        data-name="Velvet Élan"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&q=85"
+                                alt="Velvet Élan perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Velvet Élan"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Velvet Élan</h3>
+                                <p>Amber · Rose · Sandalwood</p>
+                            </div>
+
+                            <strong>Rp 219.000</strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 5 -->
+                    <article
+                        class="product-card"
+                        data-category="floral"
+                        data-name="Petale Rosé"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?auto=format&fit=crop&w=800&q=85"
+                                alt="Petale Rose perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Petale Rosé"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Petale Rosé</h3>
+                                <p>Rose · Freesia · Vanilla</p>
+                            </div>
+
+                            <strong>Rp 195.000</strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 6 -->
+                    <article
+                        class="product-card"
+                        data-category="sweet"
+                        data-name="Blush Amour"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=800&q=85"
+                                alt="Blush Amour perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Blush Amour"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Blush Amour</h3>
+                                <p>Peach · Vanilla · Musk</p>
+                            </div>
+
+                            <strong>Rp 205.000</strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 7 -->
+                    <article
+                        class="product-card"
+                        data-category="fresh"
+                        data-name="Éclat de Jour"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=800&q=85"
+                                alt="Eclat de Jour perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Éclat de Jour"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Éclat de Jour</h3>
+                                <p>Bergamot · Pear · White Tea</p>
+                            </div>
+
+                            <strong>Rp 185.000</strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCT 8 -->
+                    <article
+                        class="product-card"
+                        data-category="elegant"
+                        data-name="Maison Muse"
+                    >
+
+                        <div class="product-image">
+
+                            <span class="product-tag">
+                                LIMITED
+                            </span>
+
+                            <img
+                                src="https://images.unsplash.com/photo-1590156221820-47c2d2e0c7d0?auto=format&fit=crop&w=800&q=85"
+                                alt="Maison Muse perfume"
+                                onerror="imageFallback(this)"
+                            >
+
+                            <button
+                                class="quick-add"
+                                data-product="Maison Muse"
+                            >
+                                +
+                            </button>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <div>
+                                <h3>Maison Muse</h3>
+                                <p>Jasmine · Iris · Cashmere</p>
+                            </div>
+
+                            <strong>Rp 229.000</strong>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <button class="slider-arrow next" id="nextBtn">
+                    →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-section" id="about">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1590156221820-47c2d2e0c7d0?auto=format&fit=crop&w=1200&q=85"
+                    alt="Kyaaefleure fragrance"
+                    onerror="imageFallback(this)"
+                >
+
+            </div>
+
+            <div class="about-content">
+
+                <p class="eyebrow">ABOUT KYAAEFLEURE</p>
+
+                <h2>
+                    A fragrance
+                    <em>that feels like you.</em>
+                </h2>
+
+                <p>
+                    kyaaefleure hadir untuk perempuan muda yang
+                    percaya bahwa fragrance bukan hanya tentang
+                    bagaimana kita tercium, tetapi juga bagaimana
+                    kita merasa.
+                </p>
+
+                <p>
+                    Setiap aroma dibuat dengan karakter feminin,
+                    soft, elegant, dan modern — untuk menemani
+                    school days, coffee dates, hangouts, hingga
+                    special moments.
+                </p>
+
+                <a href="#shop" class="text-link">
+                    Explore our scents →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROMO -->
+        <section class="promo-section" id="promo">
+
+            <div class="promo-inner">
+
+                <p class="eyebrow">SPECIAL OFFER</p>
+
+                <h2>
+                    Your first
+                    <em>signature scent.</em>
+                </h2>
+
+                <p>
+                    Nikmati special offer untuk pembelian pertama
+                    dan temukan aroma yang paling cocok denganmu.
+                </p>
+
+                <a href="#shop" class="btn btn-dark">
+                    Shop the offer
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- INSTAGRAM -->
+        <section class="instagram-section">
+
+            <div class="section-heading instagram-heading">
+
+                <div>
+                    <p class="eyebrow">FOLLOW OUR WORLD</p>
+
+                    <h2>
+                        @rzkyaa4_
+                    </h2>
+                </div>
+
+                <a
+                    href="https://www.instagram.com/rzkyaa4_/"
+                    target="_blank"
+                    class="text-link"
+                >
+                    Follow Instagram →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CART DRAWER -->
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <div>
+                <p class="eyebrow">YOUR BAG</p>
+                <h2>Shopping Cart</h2>
+            </div>
+
+            <button id="closeCart">
+                ×
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+                <span>♡</span>
+                <p>Your cart is empty.</p>
+                <small>Add your favorite scent.</small>
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">
+                    Rp 0
+                </strong>
+            </div>
+
+            <button class="checkout-btn" id="checkoutBtn">
+                Order via WhatsApp
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+
+    <!-- WHATSAPP -->
+    <a
+        class="whatsapp"
+        id="whatsappButton"
+        href="https://wa.me/6285215059711?text=want%20to%20order"
+        target="_blank"
+        aria-label="Chat WhatsApp"
+    >
+
+        <span class="wa-icon">◔</span>
+
+        <span class="wa-tooltip">
+            want to order?
+        </span>
+
+    </a>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            kyaaefleure
+            <span>FRAGRANCE HOUSE</span>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#promo">Promo</a>
+
+        </div>
+
+        <div class="footer-social">
+
+            <a
+                href="https://www.instagram.com/rzkyaa4_/"
+                target="_blank"
+            >
+                Instagram
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 kyaaefleure. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
